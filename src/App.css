@@ -1,0 +1,310 @@
+.app-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f8fafc 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-danger {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+}
+
+.btn-danger:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+.charts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.charts-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .charts-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  transition: border-color 0.2s;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: rgba(15, 23, 42, 0.4);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.transaction-item:hover {
+  background-color: rgba(15, 23, 42, 0.8);
+}
+
+.transaction-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.transaction-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transaction-icon.income {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.transaction-icon.expense {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+}
+
+.transaction-details h4 {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.transaction-details p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.transaction-amount-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.amount {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.amount.income {
+  color: var(--success);
+}
+
+.amount.expense {
+  color: var(--text-primary);
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.summary-card {
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.summary-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.summary-card.total-balance h3 {
+  color: var(--primary);
+}
+
+.summary-card.total-income h3 {
+  color: var(--success);
+}
+
+.summary-card.total-expense h3 {
+  color: var(--danger);
+}
+
+.filters-bar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+  margin-top: 16px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.2s forwards;
+}
+
+.modal-content {
+  background-color: var(--bg-color);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 500px;
+  transform: translateY(20px);
+  animation: slideUp 0.3s forwards;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--text-primary);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to { transform: translateY(0); }
+}
